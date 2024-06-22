@@ -809,17 +809,6 @@
   
   
     
-      <div class="widget historyToday" id="historyToday" style="order: 0;background: #fff">
-        <header>
-          
-            <a style="color: #646160" href='/'><i class="fas fa-calendar-week fa-fw" aria-hidden="true"></i><span class='name'>历史上的今天</span></a>
-          
-        </header>
-        <div class="content">
-           <div id="myHistorySwiper" @mouseenter="stopAutoPlay()" @mouseleave="startAutoPlay()"> <swiper class="myhistoryswiper" ref="myhistoryswiper" style="height:80px;" :options="swiperOption"> <swiper-slide v-for="(item, index) in content" :key="index"> {{item.title}} </swiper-slide> </swiper> </div> <script defer src="/historyToday/index.js"></script> 
-        </div>
-    </div>
-    
   
 
   <div class="layout_sticky">    
