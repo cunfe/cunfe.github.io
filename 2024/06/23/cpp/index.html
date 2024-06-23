@@ -11,7 +11,7 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-  <title>自然语言处理 | 存风</title>
+  <title>Cpp | 存风</title>
 
   <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/120.ico">
   <link rel="stylesheet" href="https://at.alicdn.com/t/font_1911880_c1nvbyezg17.css">
@@ -587,14 +587,14 @@
   <div class="post-detail-header_info-box">
     <div class="title-box">
       <span class="title">
-        自然语言处理
+        Cpp
       </span>
     </div>
     
     
       
         <span class="post-detail-header_date">
-          <i class="fas fa-calendar"></i> 发表于：2024-06-22 |
+          <i class="fas fa-calendar"></i> 发表于：2024-06-23 |
         </span>
       
 
@@ -603,11 +603,11 @@
       
         <div class="post-detail-header_wordcount">
           <span class="totalcount">
-            <i class="fas fa-file-text-o"></i> 字数统计: 3k |
+            <i class="fas fa-file-text-o"></i> 字数统计: 1.7k |
           </span>
   
           <span class="min2read">
-            <i class="fas fa-clock"></i> 阅读时长: 10分钟 |
+            <i class="fas fa-clock"></i> 阅读时长: 6分钟 |
           </span>
   
           
@@ -634,308 +634,206 @@
   <div class="main-content">
     <article class="post post-detail">
       <div class="post-content">
-        <h1 id="自然语言处理（25-A6309-16-00）"><a href="#自然语言处理（25-A6309-16-00）" class="headerlink" title="自然语言处理（25-A6309-16:00）"></a>自然语言处理（25-A6309-16:00）</h1><h2 id="第一章、绪论"><a href="#第一章、绪论" class="headerlink" title="第一章、绪论"></a>第一章、绪论</h2><p><strong>自然语言处理</strong>是利用计算机对自然语言的形、音、义等信息进行处理，即对字、词、句、篇章的输入、输出、识别、分析、理解、生成等进行操作和加工的过程。</p>
-<p>NLP研究内容包括机器翻译、信息检索、文本分类、智能问答、信息过滤、自动文摘、信息抽取、舆情分析、语音识别、自动校对。</p>
-<p>NLP应用包括百度翻译、图灵机器人、微信语言转文字、新闻自动分类。</p>
-<p>NLP流程：</p>
+        <h1 id="Cpp（26-A4303-13-00）"><a href="#Cpp（26-A4303-13-00）" class="headerlink" title="Cpp（26-A4303-13:00）"></a>Cpp（26-A4303-13:00）</h1><p>  –（不完整）</p>
+<h2 id="第一章、初始C"><a href="#第一章、初始C" class="headerlink" title="第一章、初始C++"></a>第一章、初始C++</h2><p>namespace：可以自定义命名空间</p>
+<p><strong>匿名命名空间</strong>的作用是限制命名空间的内容仅能被当前源文件使用。</p>
+<ul>
+<li><p>cin&gt;&gt;：输入，插入运算符</p>
+</li>
+<li><p>count&lt;&lt;：输出，提取运算符</p>
+</li>
+<li><p>endl;：换行</p>
+</li>
+<li><p>const：常变量</p>
+</li>
+<li><p>bool：逻辑类型，0或1</p>
+</li>
+<li><p>enum：枚举类型</p>
+</li>
+<li><p>new: 在堆上分配内存，并调用对象的构造函数来初始化对象。</p>
+</li>
+<li><p>delete: 释放由 new分配的内存，并调用对象的析构函数来销毁对象。</p>
+</li>
+</ul>
+<p>函数重载(overload)是指同一作用域内函数名相同但参数个数或者参数类型不同的函数。</p>
+<p>C++的三大特点：</p>
 <ol>
-<li><p>语料获取</p>
+<li><p>同时支持四种编程范式，面向过程、面向对象、泛型编程、函数式编程</p>
 </li>
-<li><p>语料预处理</p>
-<ol>
-<li><p>去除数据中非文本内容</p>
+<li><p>同C语言相比，适合开发大型应用程序</p>
 </li>
-<li><p>中文分词（如jieba）</p>
-</li>
-<li><p>词性标注</p>
-</li>
-<li><p>去停用词</p>
+<li><p>具有可复用、可维护、可扩展、灵活性好的特点</p>
 </li>
 </ol>
-</li>
-<li><p>文本向量化（常用模型有：词袋模型—-最简单的模型、独热表示、TF-IDF表示、n-gram模型、Word2Vec）</p>
-</li>
-<li><p>模型构建（机器学习：KNN、SVM、K-means 深度学习：RNN、CNN、Seq2Seq）</p>
-</li>
-<li><p>模型训练</p>
-</li>
-<li><p>模型评价</p>
-</li>
-</ol>
-<h2 id="第二章、语料库"><a href="#第二章、语料库" class="headerlink" title="第二章、语料库"></a>第二章、语料库</h2><p>构建语料库应考虑：代表性、结构性、平衡性、规模性</p>
-<ul>
-<li><p><strong>concordance</strong>：显示某个词在文本中的所有出现位置及其上下文。</p>
-</li>
-<li><p><strong>common_contexts</strong>：显示两个或多个词共同出现的上下文。</p>
-</li>
-<li><p><strong>sorted</strong>：用于对列表进行排序，不是专门用于NLP的函数。</p>
-</li>
-<li><p><strong>collocations</strong>：用于搜索搭配词语的函数</p>
-</li>
-<li><p><strong>categories</strong>：返回语料库中分类标签的列表</p>
-</li>
-<li><p><strong>raw</strong>：返回语料库中原始的未处理文本。</p>
-</li>
-<li><p>open(fileid)：打开指定ID的文件，但不用于获取文件ID列表。</p>
-</li>
-<li><p><strong>fileids</strong>：用于获取语料库中的文件</p>
-</li>
-<li><p><strong>read</strong>：读取作品集文本</p>
-</li>
-<li><p><strong>count</strong>：查询词频</p>
-</li>
-<li><p>FreqDist：查询文本中词汇频数分布</p>
-</li>
-<li><p>dispersion_plot：绘制指定词分布情况离散图</p>
-</li>
-</ul>
-<h2 id="第三章、正则表达式"><a href="#第三章、正则表达式" class="headerlink" title="第三章、正则表达式"></a>第三章、正则表达式</h2><h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><p>import re</p>
-<p>匹配文本</p>
-<ul>
-<li><p>match：需要字符串开头匹配，格式为re.match(pattern,string,flags)。</p>
-</li>
-<li><p>search： 不需要字符串开头匹配，格式为re.search(pattern,string,flags)。</p>
-</li>
-<li><p>findall：会返回所有匹配结果的列表，search只返回第一个，格式为re.findall(pattern,string,flags)。</p>
-</li>
-</ul>
-<p>替换</p>
-<ul>
-<li>sub：将所有匹配到的字符串替换为指定字符串，格式为re.sub(pattern,repl,string)。</li>
-</ul>
-<h3 id="元字符"><a href="#元字符" class="headerlink" title="元字符"></a>元字符</h3><table>
-<thead>
-<tr>
-<th>符号</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>.</td>
-<td>匹配除”\n”外任意字符</td>
-</tr>
-<tr>
-<td>[ ]</td>
-<td>匹配括号内任意字符</td>
-</tr>
-<tr>
-<td>|</td>
-<td>匹配A或B</td>
-</tr>
-<tr>
-<td>^</td>
-<td>匹配^开头的内容</td>
-</tr>
-<tr>
-<td>$</td>
-<td>匹配$结尾内容</td>
-</tr>
-<tr>
-<td>?</td>
-<td>前面的元素可选，并且最多匹配1次</td>
-</tr>
-<tr>
-<td>*</td>
-<td>前面的元素会被匹配0次或多次</td>
-</tr>
-<tr>
-<td>+</td>
-<td>前面的元素会被匹配1次或多次</td>
-</tr>
-<tr>
-<td>{n}</td>
-<td>前面的元素会被匹配n次</td>
-</tr>
-<tr>
-<td>{n,}</td>
-<td>前面的元素至少会被匹配n次</td>
-</tr>
-<tr>
-<td>{n,m}</td>
-<td>前面的元素至少匹配n次，至多匹配m次</td>
-</tr>
-</tbody></table>
+<h2 id="第二章、类与对象"><a href="#第二章、类与对象" class="headerlink" title="第二章、类与对象"></a>第二章、类与对象</h2><p>构造函数（对对象进行初始化，若没有定义系统会提供一个默认<strong>无参</strong>构造函数、自动隐式调用、复制或拷贝构造函数就是用对象初始化新的对象。）</p>
 <table>
 <thead>
 <tr>
-<th>预定义字符</th>
-<th>说明</th>
+<th>构造函数</th>
+<th>析构函数</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>\w</td>
-<td>字、字母、数字</td>
+<td>与类同名</td>
+<td>与类同名，前面加~</td>
 </tr>
 <tr>
-<td>\W</td>
-<td>非（字、字母、数字）</td>
+<td>没有返回类型，void、return都不要</td>
+<td>没有返回类型，void、return都不要</td>
 </tr>
 <tr>
-<td>\s</td>
-<td>空白字符</td>
+<td>可以有参数，可以重载</td>
+<td>没有参数，不能重载</td>
 </tr>
 <tr>
-<td>\S</td>
-<td>非空白字符</td>
+<td>通常为公有函数</td>
+<td>基类的析构函数通常为虚析构函数</td>
 </tr>
 <tr>
-<td>\d</td>
-<td>数字</td>
-</tr>
-<tr>
-<td>\D</td>
-<td>非数字</td>
-</tr>
-<tr>
-<td>\b</td>
-<td>单词的边界</td>
-</tr>
-<tr>
-<td>\B</td>
-<td>非单词的边界</td>
+<td>一个类可以有多个</td>
+<td>一个类只有一个析</td>
 </tr>
 </tbody></table>
-<p>使用转移字符“\”可以将特殊字符转义为普通字符。</p>
-<h2 id="第四章、中文分词技术"><a href="#第四章、中文分词技术" class="headerlink" title="第四章、中文分词技术"></a>第四章、中文分词技术</h2><h3 id="基于规则分词"><a href="#基于规则分词" class="headerlink" title="基于规则分词"></a>基于规则分词</h3><p><strong>正向最大匹配法</strong>（切分文本后删除最后一个字符再与词典匹配，失败则重复操作）</p>
-<p><strong>逆向最大匹配法</strong>（与正向最大匹配法原理相反）</p>
-<p><strong>双向最大匹配法</strong>（将正向最大匹配法与逆向最大匹配法的结果对比，选取切分次数较少的结果）</p>
-<h3 id="基于统计分词"><a href="#基于统计分词" class="headerlink" title="基于统计分词"></a>基于统计分词</h3><p>基于规则的中文分词会遇到<strong>歧义问题</strong>（包括交集型切分歧义和组合型切分歧义）和<strong>未登录词问题</strong>（包括普通新词汇和专有名词）。</p>
-<h3 id="n-gram模型（见p52）"><a href="#n-gram模型（见p52）" class="headerlink" title="n-gram模型（见p52）"></a>n-gram模型（见p52）</h3><h3 id="数据平滑"><a href="#数据平滑" class="headerlink" title="数据平滑"></a>数据平滑</h3><p>数据平滑可以应对数据稀疏即出现式子中分子或分母为零的情况。</p>
+<p>友元函数（不是成员函数、破坏隐藏性,尽量少用、在类内声明,使用关键字friend、可以访问类中私有成员）</p>
+<p>类：</p>
+<ul>
+<li><p>类中定义的成员属性（访问范围从小到大）：private（默认属性）、protected、public。</p>
+</li>
+<li><p>默认访问权限：struct（public）、class（private）</p>
+</li>
+<li><p>自身类对象不能作为类的成员。</p>
+</li>
+<li><p>类是相似特征的对象的抽象，对象是类的一个实例。</p>
+</li>
+</ul>
+<p>对象：</p>
+<ul>
+<li><p>数据封装就是将一组数据和与这组数据有关操作组装在一起,形成一个实体,这个实体也就是<strong>对象</strong>。</p>
+</li>
+<li><p>面向对象编程（OOP）的三大特征分别是封装、继承和多态。它们各自的基本目的如下：</p>
 <ol>
-<li><p>加1平滑（规定任何词语在语料库中都至少出现一次，即使没有出现过）</p>
+<li><p><strong>封装</strong>：封装的基本目的是<strong>隐藏对象的属性和实现细节</strong></p>
 </li>
-<li><p>古德-图灵估计法（将所有看得见的事件概率适当调小分配给没有看见的事件）</p>
+<li><p><strong>继承</strong>：继承的基本目的是<strong>实现代码的重用</strong></p>
 </li>
-<li><p><strong>线性插值平滑</strong>（适合高价的n-gram模型，利用低价的n-gram模型对高价的n-gram进行线性插值，如没有“你好你”用“你好”替代）</p>
+<li><p><strong>多态</strong>：多态的基本目的是<strong>改写对象行为</strong>。多态包括编译时多态（函数重载、运算符重载）和运行时多态（虚函数、抽象类），能够根据对象的实际类型来调用相应的方法，从而实现更加灵活的代码设计。</p>
 </li>
 </ol>
-<h3 id="维特比算法（见p60）"><a href="#维特比算法（见p60）" class="headerlink" title="维特比算法（见p60）"></a>维特比算法（见p60）</h3><h2 id="第五章、词性标注与命名实体识别"><a href="#第五章、词性标注与命名实体识别" class="headerlink" title="第五章、词性标注与命名实体识别"></a>第五章、词性标注与命名实体识别</h2><h3 id="词性标注规范"><a href="#词性标注规范" class="headerlink" title="词性标注规范"></a>词性标注规范</h3><p>现代汉语中的词性可分为实词和虚词，共12种。</p>
-<p>jieba词性标注流程：</p>
+</li>
+</ul>
+<p>过程：</p>
+<ul>
+<li>面向过程编程的基本单位是<strong>函数</strong>。</li>
+</ul>
+<p>公有的静态成员函数,可以通过对象或类名进行调用。</p>
+<p>指针：</p>
+<ul>
+<li><p>静态成员函数没有this指针</p>
+</li>
+<li><p>指针本身并不会分配或释放内存空间</p>
+</li>
+<li><p>this指针（是隐藏的）会保证每个对象拥有自己的数据成员，但共享处理这些数据的代码</p>
+</li>
+</ul>
+<h2 id="第三章、运算符重载"><a href="#第三章、运算符重载" class="headerlink" title="第三章、运算符重载"></a>第三章、运算符重载</h2><p>运算符重载是对已有的运算符重新进行定义，使其能够在程序员定义的类型上进行操作。本质是函数重载。</p>
+<p>流输出运算符（&lt;&lt;）需要重载为全局函数，因为其左操作数的类型只能是ostream类型。</p>
+<p>输入输出运算符应该重载为类的友元函数。</p>
+<p>运算符按照全局函数方式进行重载,，不必声明为友元函数。</p>
+<p><strong>重载运算符</strong>由关键字<strong>operator</strong>和其后要重载的运算符共同组成。</p>
+<p>单目运算符（<strong>单目运算符使用成员函数重载可以不用形参，双目运算符使用一个参数。</strong>）</p>
 <ol>
-<li><p>加载离线统计词典</p>
+<li><p><strong>递增和递减运算符</strong>：<code>++</code> 和 <code>--</code>，用于分别增加或减少操作数的值。</p>
 </li>
-<li><p>构建前缀词典</p>
+<li><p><strong>取地址和间接引用运算符</strong>：<code>&amp;</code> 和 <code>*</code>，分别用于获取变量的地址和访问指针所指向的值。</p>
 </li>
-<li><p>构建有向无环图</p>
+<li><p><strong>正负号运算符</strong>：<code>+</code> 和 <code>-</code>，用于表示数字的正负。</p>
 </li>
-<li><p>计算最大概率路径</p>
+<li><p><strong>逻辑非运算符</strong>：<code>!</code>，用于对布尔值进行取反操作。</p>
+</li>
+<li><p><strong>按位取反运算符</strong>：<code>~</code>，用于对二进制数进行按位取反操作。</p>
+</li>
+<li><p><strong>sizeof 运算符</strong>：<code>sizeof</code>，用于返回数据类型或变量所占内存的字节数。</p>
+</li>
+<li><p><strong>类型转换运算符</strong>：例如 <code>(int)</code>，用于执行显式类型转换。</p>
 </li>
 </ol>
-<h3 id="命名实体识别"><a href="#命名实体识别" class="headerlink" title="命名实体识别"></a>命名实体识别</h3><p>中文实体识别面临的挑战：</p>
-<ol>
-<li><p>中文词灵活多变</p>
-</li>
-<li><p>中文词的嵌套情况复杂</p>
-</li>
-<li><p>中文词存在简化表达现象</p>
-</li>
-</ol>
-<h3 id="CRF模型"><a href="#CRF模型" class="headerlink" title="CRF模型"></a>CRF模型</h3><p>CRF是基于统计方法的模型，主要来源于最大熵模型，可以被认为是一个无向图或一个马尔科夫随机场。</p>
-<h3 id="中文命名实体识别"><a href="#中文命名实体识别" class="headerlink" title="中文命名实体识别"></a>中文命名实体识别</h3><p>在多分类问题中，最经典的模型是多项逻辑斯谛回归，也称为 Softmax 回归</p>
-<p>特征函数（可以用于指示某个特定特征是否在当前样本中出现）输入值中，0表示特征不存在或条件不满足，1表示特征存在或条件满足。</p>
-<h2 id="第六章、关键词提取"><a href="#第六章、关键词提取" class="headerlink" title="第六章、关键词提取"></a>第六章、关键词提取</h2><h3 id="关键词提取算法"><a href="#关键词提取算法" class="headerlink" title="关键词提取算法"></a>关键词提取算法</h3><p>关键词提取算法的性质：</p>
-<ol>
-<li><p>可读性</p>
-</li>
-<li><p>高速性</p>
-</li>
-<li><p>学习性</p>
-</li>
-<li><p>健壮性</p>
-</li>
-</ol>
-<p>常见的关键词提取算法有TF-IDF算法、TextRank算法和主题模型算法（LSA和LDA算法）</p>
-<h4 id="TF-IDF算法"><a href="#TF-IDF算法" class="headerlink" title="TF-IDF算法"></a>TF-IDF算法</h4><p>TF-IDF算法（词频-逆文档频率算法）主要思想是字词的重要性随着它在文档中出现次数的增加而上升，并随着它在语料库中出现频率的升高而下降。它 对文本内容的利用程度较低。</p>
-<p>词频（TF）是一个词在一篇文档中出现频次的统计量。</p>
-<p>逆文档（IDF）是一个词出现在文档集中文档的频次的统计量。一个词在文档集中越少的文档中出现，说明这个词对文档的区分能力越强。</p>
-<h4 id="TextRank算法"><a href="#TextRank算法" class="headerlink" title="TextRank算法"></a>TextRank算法</h4><p>TextRank算法是一种基于图的文本排序算法，它可以用于自动摘要和提取关键词。与TF-IDF算法相比不依靠现有文档集提取关键词，只利用局部词汇之间的关系对后续关键词排序，随后从文本中提取词或句子，从而实现提取关键词和自动摘要。TextRank算法的基本思想来自PageRank算法。</p>
-<h4 id="LSA和LDA算法"><a href="#LSA和LDA算法" class="headerlink" title="LSA和LDA算法"></a>LSA和LDA算法</h4><p>TF-IDF算法和TextRank算法无法在某些场合提取文本中的语义信息。</p>
-<p>主题模型算法是在大量文档中发现潜在主题的一种统计模型，它能够识别文章中的隐藏主题，并揭示这些主题中包含的关键词。</p>
-<p>LSA算法核心思想是将所拥有的词语-文档矩阵分解成相互独立的词语-主题矩阵和主题-文档矩阵。</p>
-<p>LDA算法包含词语、主题和文档3层结构，它假定词语之间没有顺序，所有的词语都无序地放在一个袋子里，并且认为一个文档可以有多个主题对应不同的词语。</p>
-<h2 id="第七章、文本向量化（主要有离散表示和分布式表示）"><a href="#第七章、文本向量化（主要有离散表示和分布式表示）" class="headerlink" title="第七章、文本向量化（主要有离散表示和分布式表示）"></a>第七章、文本向量化（主要有离散表示和分布式表示）</h2><h3 id="文本离散表示"><a href="#文本离散表示" class="headerlink" title="文本离散表示"></a>文本离散表示</h3><p>离散表示是一种基于规则和统计的向量化方法，常用的有词集模型和词袋(BOW)模型。特点是忽略文本信息中的语序信息和语境信息仅将其反映为若干维度的独立概念。词集模型采用独热表示，只要单词在字典中就置为1不管出现多少次；BOW模型只要文本中的词出现在字典就加1次出现多少加多少。</p>
-<p>独热表示用一个长的向量表示一个词，向量长度为字典的大小，每个向量只有一个维度的值为1，其余维度的数值全部为0，为1的维度表示该词语在字典中的位置。</p>
-<p>独热表示词向量的缺点：</p>
-<ol>
-<li><p>维数过高</p>
-</li>
-<li><p>矩阵稀疏</p>
-</li>
-<li><p>不能保留语义</p>
-</li>
-</ol>
-<p>BOW模型用一个向量表示一句话或一个文档。</p>
-<p>BOW模型的缺点：</p>
-<ol>
-<li><p>不能保留语义</p>
-</li>
-<li><p>维数高和稀疏性</p>
-</li>
-</ol>
-<p>TF-IDF表示是用一个向量表示一句话或一个文档，它是在BOW模型基础上对词出现的频次赋予TF-IDF权值，对BOW模型进行修正，进而表示该词在文档集合中的重要程度。</p>
-<h3 id="文本分布式表示"><a href="#文本分布式表示" class="headerlink" title="文本分布式表示"></a>文本分布式表示</h3><p>文本分布式表示是将每个词根据上下文从高维空间映射到一个低维度、稠密的向量上。常用模型有LSA矩阵分解模型、PLSA潜在语义分析概率模型、LDA文档生成模型和Word2Vec模型。</p>
-<p>Word2Vec模型是简单化的神经网络模型。可以在巨量的字典和数据集中高效训练，其训练结果可以很好<strong>度量词与词之间的相似性</strong>。它的特点是当模型训练好后，并不会使用训练好的模型处理新的任务，<strong>真正需要的是模型通过训练数据所得的参数</strong>，如隐藏层的权重矩阵。</p>
-<p>Word2Vec模型可以分为连词袋(CBOW)模型和跳字(Skip-Gram)模型。</p>
-<p>Doc2Vec模型在Word2Vec模型输入层增添了一个与词向量同维度的段落向量（可看作另一个词向量）。</p>
-<p>Doc2Vec模型存在分布式记忆(DM)模型和分布式词袋(DBOW)模型，分别对应Word2Vec模型里面的CBOW模型和Skip-Gram模型。</p>
-<p>DW模型与CBOW模型相对应，可以根据上下文词向量和段落向量预测目标词的概率分布。</p>
-<p>DBOW模型与Skip-Gram模型相对应，只输入段落向量，DBOW模型可以预测从段落中随机抽取的词组的概率分布。</p>
+<p><strong>在C++中，只能使用成员函数重载的运算符有：&#x3D;、()、[]、-&gt;</strong></p>
+<h2 id="第四章、继承与派生"><a href="#第四章、继承与派生" class="headerlink" title="第四章、继承与派生"></a>第四章、继承与派生</h2><p>在派生类中基类的保护或者基类公有都可以直接访问，基类的私有成员只能由基类 的成员函数来访问。</p>
+<p>在公有继承的情况下，基类的公有或保护成员在派生类中的访问权限<strong>保持不变。</strong></p>
+<p>C++语言建立类族是通过类的继承</p>
+<p>派生类和基类的关系（多对多）也称为 “is-a” 关系。这种关系用来描述一个对象是另一个对象的一种特殊类型。例如，”鱼是一种动物” 。</p>
+<p>两个类即有相同的功能，也有不同的功能，则应该让这两个类派生自同一个基类，相同的功能写在基类,中，不同的功能写在派生类中。</p>
+<p>无论采用什么样的继承方式，派生类包括基类的所有成员，包括私有成员。</p>
+<p>公有继承对派生类继承成员的访问控制权限影响</p>
 <table>
 <thead>
 <tr>
-<th>CBOW模型</th>
-<th>DM模型</th>
-<th>Skip-Gram模型</th>
-<th>DBOW模型</th>
+<th>基类成员访问属性</th>
+<th>public</th>
+<th>protected</th>
+<th>private</th>
+<th>不可访问</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>输入特定词的上下文对应的独热向量</td>
-<td>输入上下文词向量和段落向量</td>
-<td>输入特定词的独热词向量</td>
-<td>输入段落向量</td>
-</tr>
-<tr>
-<td>输出这个特定词的概率分布</td>
-<td>预测目标词概率分布</td>
-<td>输出这个特定词的上下文概率分布</td>
-<td>预测段落中随机抽取词组概率分布</td>
-</tr>
-<tr>
-<td>适用于小型语料</td>
-<td></td>
-<td>在大型语料表现更好</td>
-<td></td>
+<td><strong>在派生类中的访问属性</strong></td>
+<td><strong>public</strong></td>
+<td><strong>protected</strong></td>
+<td><strong>不可访问</strong></td>
+<td><strong>不可访问</strong></td>
 </tr>
 </tbody></table>
-<h2 id="第十章、NLP中的深度学习技术"><a href="#第十章、NLP中的深度学习技术" class="headerlink" title="第十章、NLP中的深度学习技术"></a>第十章、NLP中的深度学习技术</h2><p>循环神经网络(RNN)是以序列数据为输入，在序列的演进方向进行递归，并且所有节点按链式连接的递归神经网络。</p>
-<p>RNN适合用于处理视频、语言、文本等与时序相关的问题。常见应用邻域有文本生成、语言模型、图像处理、机器翻译、语言识别、图像描述生成、文本相似度计算、音乐推荐和商品推荐等。</p>
-<p>RNN结构按输入和输出的序列长度可划分为多对一、<strong>等长的多对多</strong>(经典结构)和非等长3中结构。  </p>
-<p>双向RNN不仅考虑预测词前面的词，还<strong>考虑该词后面的内容</strong>。</p>
-<p>LSTM使RNN具备避免梯度消失的特性，从而让RNN自身具备处理长期序列依赖的能力。LSTM神经网络模型使用门结构实现了对序列数据中的遗忘与记忆。</p>
-<p>TensorFlow的特点：</p>
-<ol>
-<li><p>高度的灵活性</p>
-</li>
-<li><p>可移植性</p>
-</li>
-<li><p>综合了科研和产品</p>
-</li>
-<li><p>自动计算梯度导数</p>
-</li>
-<li><p>性能最优化</p>
-</li>
-<li><p>多语言支持</p>
-</li>
-</ol>
+<p>保护继承对派生类继承成员的访问控制权限影响</p>
+<table>
+<thead>
+<tr>
+<th>基类成员访问属性</th>
+<th>public</th>
+<th>protected</th>
+<th>private</th>
+<th>不可访问</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>在派生类中的访问属性</strong></td>
+<td><strong>protected</strong></td>
+<td><strong>protected</strong></td>
+<td><strong>不可访问</strong></td>
+<td><strong>不可访问</strong></td>
+</tr>
+</tbody></table>
+<p>私有继承对派生类继承成员的访问控制权限影响</p>
+<table>
+<thead>
+<tr>
+<th>基类成员访问属性</th>
+<th>public</th>
+<th>protected</th>
+<th>private</th>
+<th>不可访问</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>在派生类中的访问属性</strong></td>
+<td><strong>private</strong></td>
+<td><strong>private</strong></td>
+<td><strong>不可访问</strong></td>
+<td><strong>不可访问</strong></td>
+</tr>
+</tbody></table>
+<h2 id="第五章、多态与虚函数"><a href="#第五章、多态与虚函数" class="headerlink" title="第五章、多态与虚函数"></a>第五章、多态与虚函数</h2><p>多态是一种调用名称相同的函数，却因上下文不同会有不同实现的一种机制。</p>
+<p>多态有两种形式，分别是重载实现的<strong>静态</strong>多态和虚函数实现的<strong>动态</strong>多态。</p>
+<p>在C++中，实现动态多态的核心数据结构是一张<strong>虚函数</strong>（virtual）表。</p>
+<p>纯虚函数没有函数体，在声明时，需要在后面加上 &#x3D;0 （两个字），拥有纯虚函数的类称为抽象类，无法直接创建该类的实例</p>
+<p>关键字override可以检测派生类对基类虚函数的重写是否正确。</p>
 
       </div>
       <div class="post-tags-categories">
         
         <div class="tags">
           
-            <a href="/tags/python/" class="">
-              python
+            <a href="/tags/C/" class="">
+              C++
             </a>
           
         </div>
@@ -949,7 +847,7 @@
     </li>
     <li class="post-copyright-link">
     <strong>文章链接:  </strong>
-    <a href="/2024/06/22/zi-ran-yu-yan-chu-li/" target="_blank" title="自然语言处理">https://cunfe.top/2024/06/22/zi-ran-yu-yan-chu-li/</a>
+    <a href="/2024/06/23/cpp/" target="_blank" title="Cpp">https://cunfe.top/2024/06/23/cpp/</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明:   </strong>
@@ -971,18 +869,17 @@
   <div class="post-nav-prev post-nav-item">
     <div class="post-nav-img" style="background-size: cover; 
       background-position: center center;">
-      <img class="lazyload lazyload placeholder" src="https://picx.zhimg.com/80/v2-85c31120acff76826ab53ea8934ef4bb_1440w.webp" class="lazyload placeholder" data-srcset="https://picx.zhimg.com/80/v2-85c31120acff76826ab53ea8934ef4bb_1440w.webp" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+      <img class="lazyload lazyload placeholder" src="https://pic3.zhimg.com/80/v2-5f7cb7e900b9dcf5354c3d4d2c5cc3c2_1440w.webp" class="lazyload placeholder" data-srcset="https://pic3.zhimg.com/80/v2-5f7cb7e900b9dcf5354c3d4d2c5cc3c2_1440w.webp" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
     </div>
-    <a href="/2024/06/23/cpp/" class="post-nav-link">
+    <a href="/2024/06/23/ruan-jian-gong-cheng/" class="post-nav-link">
       <div class="title">
         <i class="fas fa-angle-left"></i> 上一篇:
-        <div class="title-text">Cpp</div>
+        <div class="title-text">软件工程</div>
       </div>
       
       <!-- <div class="content">
-        Cpp（26-A4303-13:00）  –（不完整）
-第一章、初始C++namespace：可以自定义命名空间
-匿名命
+        软件工程（28-A7218-13:00）–（不完整）
+第一章、软件工程概述软件危机（计算机软件的开发和维护中遇到的严重问
       </div> -->
     </a>
   </div>
@@ -993,16 +890,15 @@
   <div class="post-nav-next post-nav-item">
     <div class="post-nav-img" style="background-size: cover; 
       background-position: center center;">
-      <img class="lazyload lazyload placeholder" src="https://pic.netbian.com/uploads/allimg/240325/201846-17113691268137.jpg" class="lazyload placeholder" data-srcset="https://pic.netbian.com/uploads/allimg/240325/201846-17113691268137.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" src="" alt="">
+      <img class="lazyload lazyload placeholder" src="https://picx.zhimg.com/80/v2-85c31120acff76826ab53ea8934ef4bb_1440w.webp" class="lazyload placeholder" data-srcset="https://picx.zhimg.com/80/v2-85c31120acff76826ab53ea8934ef4bb_1440w.webp" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" src="" alt="">
     </div>
-    <a href="/2024/06/04/bian-xie-zi-dong-fa-song-mei-ri-dian-zi-you-jian-bao-gao-de-jiao-ben/" class="post-nav-link">
+    <a href="/2024/06/22/zi-ran-yu-yan-chu-li/" class="post-nav-link">
       <div class="title">
         下一篇: <i class="fas fa-angle-right"></i>
-        <div class="title-text">python 编写自动发送每日电子邮件报告的脚本</div>
+        <div class="title-text">自然语言处理</div>
       </div>
       <!-- <div class="content">
-        Python 编写自动发送每日电子邮件报告的脚本准备工作：
-安装必要的 Python 库，如 smtplib（用于发送邮
+        自然语言处理（25-A6309-16:00）第一章、绪论自然语言处理是利用计算机对自然语言的形、音、义等信息进行处理，即
       </div> -->
     </a>
   </div>
@@ -1123,7 +1019,7 @@
   <div class='content'>
     <div class="toc-main">
       <div class="toc-content">
-        <!-- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86%EF%BC%8825-A6309-16-00%EF%BC%89"><span class="toc-text">自然语言处理（25-A6309-16:00）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0%E3%80%81%E7%BB%AA%E8%AE%BA"><span class="toc-text">第一章、绪论</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0%E3%80%81%E8%AF%AD%E6%96%99%E5%BA%93"><span class="toc-text">第二章、语料库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0%E3%80%81%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-text">第三章、正则表达式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%BD%E6%95%B0"><span class="toc-text">函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%83%E5%AD%97%E7%AC%A6"><span class="toc-text">元字符</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0%E3%80%81%E4%B8%AD%E6%96%87%E5%88%86%E8%AF%8D%E6%8A%80%E6%9C%AF"><span class="toc-text">第四章、中文分词技术</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E4%BA%8E%E8%A7%84%E5%88%99%E5%88%86%E8%AF%8D"><span class="toc-text">基于规则分词</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E4%BA%8E%E7%BB%9F%E8%AE%A1%E5%88%86%E8%AF%8D"><span class="toc-text">基于统计分词</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#n-gram%E6%A8%A1%E5%9E%8B%EF%BC%88%E8%A7%81p52%EF%BC%89"><span class="toc-text">n-gram模型（见p52）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%B9%B3%E6%BB%91"><span class="toc-text">数据平滑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%B4%E7%89%B9%E6%AF%94%E7%AE%97%E6%B3%95%EF%BC%88%E8%A7%81p60%EF%BC%89"><span class="toc-text">维特比算法（见p60）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0%E3%80%81%E8%AF%8D%E6%80%A7%E6%A0%87%E6%B3%A8%E4%B8%8E%E5%91%BD%E5%90%8D%E5%AE%9E%E4%BD%93%E8%AF%86%E5%88%AB"><span class="toc-text">第五章、词性标注与命名实体识别</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%8D%E6%80%A7%E6%A0%87%E6%B3%A8%E8%A7%84%E8%8C%83"><span class="toc-text">词性标注规范</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%91%BD%E5%90%8D%E5%AE%9E%E4%BD%93%E8%AF%86%E5%88%AB"><span class="toc-text">命名实体识别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CRF%E6%A8%A1%E5%9E%8B"><span class="toc-text">CRF模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%AD%E6%96%87%E5%91%BD%E5%90%8D%E5%AE%9E%E4%BD%93%E8%AF%86%E5%88%AB"><span class="toc-text">中文命名实体识别</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E7%AB%A0%E3%80%81%E5%85%B3%E9%94%AE%E8%AF%8D%E6%8F%90%E5%8F%96"><span class="toc-text">第六章、关键词提取</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E9%94%AE%E8%AF%8D%E6%8F%90%E5%8F%96%E7%AE%97%E6%B3%95"><span class="toc-text">关键词提取算法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#TF-IDF%E7%AE%97%E6%B3%95"><span class="toc-text">TF-IDF算法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#TextRank%E7%AE%97%E6%B3%95"><span class="toc-text">TextRank算法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#LSA%E5%92%8CLDA%E7%AE%97%E6%B3%95"><span class="toc-text">LSA和LDA算法</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E7%AB%A0%E3%80%81%E6%96%87%E6%9C%AC%E5%90%91%E9%87%8F%E5%8C%96%EF%BC%88%E4%B8%BB%E8%A6%81%E6%9C%89%E7%A6%BB%E6%95%A3%E8%A1%A8%E7%A4%BA%E5%92%8C%E5%88%86%E5%B8%83%E5%BC%8F%E8%A1%A8%E7%A4%BA%EF%BC%89"><span class="toc-text">第七章、文本向量化（主要有离散表示和分布式表示）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E6%9C%AC%E7%A6%BB%E6%95%A3%E8%A1%A8%E7%A4%BA"><span class="toc-text">文本离散表示</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E6%9C%AC%E5%88%86%E5%B8%83%E5%BC%8F%E8%A1%A8%E7%A4%BA"><span class="toc-text">文本分布式表示</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E7%AB%A0%E3%80%81NLP%E4%B8%AD%E7%9A%84%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%8A%80%E6%9C%AF"><span class="toc-text">第十章、NLP中的深度学习技术</span></a></li></ol></li></ol> -->
+        <!-- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Cpp%EF%BC%8826-A4303-13-00%EF%BC%89"><span class="toc-text">Cpp（26-A4303-13:00）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0%E3%80%81%E5%88%9D%E5%A7%8BC"><span class="toc-text">第一章、初始C++</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0%E3%80%81%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1"><span class="toc-text">第二章、类与对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0%E3%80%81%E8%BF%90%E7%AE%97%E7%AC%A6%E9%87%8D%E8%BD%BD"><span class="toc-text">第三章、运算符重载</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0%E3%80%81%E7%BB%A7%E6%89%BF%E4%B8%8E%E6%B4%BE%E7%94%9F"><span class="toc-text">第四章、继承与派生</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0%E3%80%81%E5%A4%9A%E6%80%81%E4%B8%8E%E8%99%9A%E5%87%BD%E6%95%B0"><span class="toc-text">第五章、多态与虚函数</span></a></li></ol></li></ol> -->
         <div class="toc"></div>
       </div>
     </div>
