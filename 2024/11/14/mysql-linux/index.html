@@ -11,7 +11,7 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-  <title>myaql常用命令 | 存风</title>
+  <title>MySQL-Linux | 存风</title>
 
   <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/120.ico">
   <link rel="stylesheet" href="https://at.alicdn.com/t/font_1911880_c1nvbyezg17.css">
@@ -580,39 +580,30 @@
 
 
 <div class="post-detail-header" id="thumbnail_canvas" style="background-repeat: no-repeat; background-size: cover; 
-  background-position: center center;position: relative;background-image:url('https://pic.netbian.com/uploads/allimg/240603/000430-1717344270b140.jpg')">
+  background-position: center center;position: relative;background-image:url('https://picx.zhimg.com/80/v2-85c31120acff76826ab53ea8934ef4bb_1440w.webp')">
   <div class="post-detail-header-mask"></div>
   <canvas id="header_canvas"style="position:absolute;bottom:0;pointer-events:none;"></canvas>
   
   <div class="post-detail-header_info-box">
     <div class="title-box">
       <span class="title">
-        myaql常用命令
+        MySQL-Linux
       </span>
     </div>
     
     
       
         <span class="post-detail-header_date">
-          <i class="fas fa-calendar"></i> 发表于：2024-05-10 |
+          <i class="fas fa-calendar"></i> 发表于：2024-11-14 |
         </span>
       
 
-      
-        <span class="post-detail-header_categories">
-          <i class="iconfont iconbookmark1"></i> 分类：
-          
-            <a href="/categories/%E5%91%BD%E4%BB%A4/" class="post-detail-header_category">
-              命令
-            </a>
-          
-        </span>
       
 
       
         <div class="post-detail-header_wordcount">
           <span class="totalcount">
-            <i class="fas fa-file-text-o"></i> 字数统计: 125 |
+            <i class="fas fa-file-text-o"></i> 字数统计: 240 |
           </span>
   
           <span class="min2read">
@@ -643,29 +634,47 @@
   <div class="main-content">
     <article class="post post-detail">
       <div class="post-content">
-        <h1 id="myaql常用命令"><a href="#myaql常用命令" class="headerlink" title="myaql常用命令"></a>myaql常用命令</h1><h2 id="mysql服务的启动和停止"><a href="#mysql服务的启动和停止" class="headerlink" title="mysql服务的启动和停止"></a>mysql服务的启动和停止</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net stop mysql net <span class="keyword">start</span> mysql</span><br></pre></td></tr></table></figure>
-
-<h2 id="登陆mysql"><a href="#登陆mysql" class="headerlink" title="登陆mysql"></a>登陆mysql</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p</span><br></pre></td></tr></table></figure>
-
-<h2 id="增加新用户"><a href="#增加新用户" class="headerlink" title="增加新用户"></a>增加新用户</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">grant</span> 权限 <span class="keyword">on</span> 数据库.<span class="operator">*</span> <span class="keyword">to</span> 用户名@登录主机 identified <span class="keyword">by</span> &quot;密码</span><br></pre></td></tr></table></figure>
-
-<h2 id="选择数据库"><a href="#选择数据库" class="headerlink" title="选择数据库"></a>选择数据库</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">use 数据库名</span><br></pre></td></tr></table></figure>
-
-<h2 id="显示数据库列表"><a href="#显示数据库列表" class="headerlink" title="显示数据库列表"></a>显示数据库列表</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">show</span> databases;</span><br></pre></td></tr></table></figure>
-
-<h2 id="显示数据表的结构"><a href="#显示数据表的结构" class="headerlink" title="显示数据表的结构"></a>显示数据表的结构</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">describe</span> 表名;</span><br></pre></td></tr></table></figure>
-
-<h2 id="建库与删库"><a href="#建库与删库" class="headerlink" title="建库与删库"></a>建库与删库</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> database 库名;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">drop</span> database 库名;</span><br></pre></td></tr></table></figure>
-
-<h2 id="建表与删表"><a href="#建表与删表" class="headerlink" title="建表与删表"></a>建表与删表</h2><h3 id="a-进入数据库"><a href="#a-进入数据库" class="headerlink" title="a.进入数据库"></a>a.进入数据库</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">use 库名;</span><br></pre></td></tr></table></figure>
-
-<h3 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> 表名(字段列表);</span><br></pre></td></tr></table></figure>
-
-<h3 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">drop</span> <span class="keyword">table</span> 表名;</span><br></pre></td></tr></table></figure>
-
-<h3 id="退出"><a href="#退出" class="headerlink" title="退出"></a>退出</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">exit;</span><br></pre></td></tr></table></figure>
+        <h1 id="MySQL-Linux"><a href="#MySQL-Linux" class="headerlink" title="MySQL-Linux"></a>MySQL-Linux</h1><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><pre><code>sudo apt install -y mysql-server
+</code></pre>
+<h3 id="开启MySQL服务"><a href="#开启MySQL服务" class="headerlink" title="开启MySQL服务"></a>开启MySQL服务</h3><pre><code>sudo systemctl start mysql
+</code></pre>
+<h3 id="MySQL设置为开机自启动："><a href="#MySQL设置为开机自启动：" class="headerlink" title="MySQL设置为开机自启动："></a>MySQL设置为开机自启动：</h3><pre><code>sudo systemctl enable mysql
+</code></pre>
+<h3 id="检查MySQL状态"><a href="#检查MySQL状态" class="headerlink" title="检查MySQL状态"></a>检查MySQL状态</h3><pre><code>sudo systemctl status mysql
+</code></pre>
+<h3 id="登录"><a href="#登录" class="headerlink" title="登录"></a>登录</h3><pre><code>mysql -uroot -p;
+</code></pre>
+<h3 id="进入系统库"><a href="#进入系统库" class="headerlink" title="进入系统库"></a>进入系统库</h3><pre><code>use mysql;
+</code></pre>
+<h3 id="设置密码，localhost-本地访问，-可远程访问"><a href="#设置密码，localhost-本地访问，-可远程访问" class="headerlink" title="设置密码，localhost 本地访问，% 可远程访问"></a>设置密码，localhost 本地访问，% 可远程访问</h3><pre><code>ALTER USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED WITH mysql_native_password BY &#39;新密码&#39;;
+</code></pre>
+<h3 id="修改host"><a href="#修改host" class="headerlink" title="修改host"></a>修改host</h3><pre><code>update user set host = &#39;%&#39; where user = &#39;root&#39;;
+</code></pre>
+<h3 id="创建新用户"><a href="#创建新用户" class="headerlink" title="创建新用户"></a>创建新用户</h3><pre><code>CREATE USER &#39;username&#39;@&#39;host&#39; IDENTIFIED BY &#39;password&#39;;
+</code></pre>
+<h3 id="查看用户访问端口"><a href="#查看用户访问端口" class="headerlink" title="查看用户访问端口"></a>查看用户访问端口</h3><pre><code>select user,host from user;
+</code></pre>
+<h3 id="刷新缓存"><a href="#刷新缓存" class="headerlink" title="刷新缓存"></a>刷新缓存</h3><pre><code>flush privileges;
+</code></pre>
+<h3 id="修改-etc-mysql-mysqld-conf-d-mysqld-cnf-实现远程访问"><a href="#修改-etc-mysql-mysqld-conf-d-mysqld-cnf-实现远程访问" class="headerlink" title="修改 &#x2F;etc&#x2F;mysql&#x2F;mysqld.conf.d&#x2F;mysqld.cnf,实现远程访问"></a>修改 &#x2F;etc&#x2F;mysql&#x2F;mysqld.conf.d&#x2F;mysqld.cnf,实现远程访问</h3><pre><code>bind-address            = 0.0.0.0
+</code></pre>
+<h3 id="重启服务"><a href="#重启服务" class="headerlink" title="重启服务"></a>重启服务</h3><pre><code>sudo systemctl restart mysql
+</code></pre>
+<h3 id="创建数据库"><a href="#创建数据库" class="headerlink" title="创建数据库"></a>创建数据库</h3><pre><code>CREATE DATABASE 库名;
+</code></pre>
+<h3 id="显示数据库"><a href="#显示数据库" class="headerlink" title="显示数据库"></a>显示数据库</h3><pre><code>show databases;
+</code></pre>
+<h3 id="为root授予所有权限"><a href="#为root授予所有权限" class="headerlink" title="为root授予所有权限"></a>为root授予所有权限</h3><pre><code>GRANT ALL PRIVILEGES ON *.* TO &#39;root&#39;@&#39;localhost&#39;;
+</code></pre>
+<h3 id="关闭服务"><a href="#关闭服务" class="headerlink" title="关闭服务"></a>关闭服务</h3><pre><code>sudo systemctl stop mysql
+</code></pre>
+<h3 id="彻底卸载"><a href="#彻底卸载" class="headerlink" title="彻底卸载"></a>彻底卸载</h3><pre><code>sudo apt purge mysql-*
+sudo rm -rf /etc/mysql/ /var/lib/mysql
+sudo apt autoremove
+sudo apt autoclean
+</code></pre>
+<p>C语言安装MySQL库</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install libmysqlclient-dev</span><br></pre></td></tr></table></figure>
 
       </div>
       <div class="post-tags-categories">
@@ -687,7 +696,7 @@
     </li>
     <li class="post-copyright-link">
     <strong>文章链接:  </strong>
-    <a href="/2024/05/10/myaql-chang-yong-ming-ling/" target="_blank" title="myaql常用命令">https://cunfe.top/2024/05/10/myaql-chang-yong-ming-ling/</a>
+    <a href="/2024/11/14/mysql-linux/" target="_blank" title="MySQL-Linux">https://cunfe.top/2024/11/14/mysql-linux/</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明:   </strong>
@@ -705,43 +714,21 @@
 
 
 
-  
-  <div class="post-nav-prev post-nav-item">
-    <div class="post-nav-img" style="background-size: cover; 
-      background-position: center center;">
-      <img class="lazyload lazyload placeholder" src="https://pic.netbian.com/uploads/allimg/240325/201846-17113691268137.jpg" class="lazyload placeholder" data-srcset="https://pic.netbian.com/uploads/allimg/240325/201846-17113691268137.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
-    </div>
-    <a href="/2024/05/10/hexo-bo-ke-da-jian-github-bamboo-zhu-ti/" class="post-nav-link">
-      <div class="title">
-        <i class="fas fa-angle-left"></i> 上一篇:
-        <div class="title-text">Hexo博客搭建+Github+Bamboo主题</div>
-      </div>
-      
-      <!-- <div class="content">
-        Hexo博客搭建+Github+Bamboo主题资源下载node.jsnode安装地址：https://nodejs.o
-      </div> -->
-    </a>
-  </div>
-
 
 
   
   <div class="post-nav-next post-nav-item">
     <div class="post-nav-img" style="background-size: cover; 
       background-position: center center;">
-      <img class="lazyload lazyload placeholder" src="https://picx.zhimg.com/80/v2-85c31120acff76826ab53ea8934ef4bb_1440w.webp" class="lazyload placeholder" data-srcset="https://picx.zhimg.com/80/v2-85c31120acff76826ab53ea8934ef4bb_1440w.webp" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" src="" alt="">
+      <img class="lazyload lazyload placeholder" src="https://pic3.zhimg.com/80/v2-5f7cb7e900b9dcf5354c3d4d2c5cc3c2_1440w.webp" class="lazyload placeholder" data-srcset="https://pic3.zhimg.com/80/v2-5f7cb7e900b9dcf5354c3d4d2c5cc3c2_1440w.webp" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" src="" alt="">
     </div>
-    <a href="/2024/05/10/node-chang-yong-ming-ling/" class="post-nav-link">
+    <a href="/2024/06/24/ruan-jian-gong-cheng/" class="post-nav-link">
       <div class="title">
         下一篇: <i class="fas fa-angle-right"></i>
-        <div class="title-text">node常用命令</div>
+        <div class="title-text">软件工程</div>
       </div>
       <!-- <div class="content">
-        node检查版本与是否存在1node -v
-
-1npm -v
-
-配置12npm config set prefix &q
+        软件工程（28-A7218-13:00）第一章、软件工程概述软件工程的定义软件工程是采用工程的概念、原理、技术和方法来开
       </div> -->
     </a>
   </div>
@@ -862,7 +849,7 @@
   <div class='content'>
     <div class="toc-main">
       <div class="toc-content">
-        <!-- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#myaql%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="toc-text">myaql常用命令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#mysql%E6%9C%8D%E5%8A%A1%E7%9A%84%E5%90%AF%E5%8A%A8%E5%92%8C%E5%81%9C%E6%AD%A2"><span class="toc-text">mysql服务的启动和停止</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%99%BB%E9%99%86mysql"><span class="toc-text">登陆mysql</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A2%9E%E5%8A%A0%E6%96%B0%E7%94%A8%E6%88%B7"><span class="toc-text">增加新用户</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%89%E6%8B%A9%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-text">选择数据库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%98%BE%E7%A4%BA%E6%95%B0%E6%8D%AE%E5%BA%93%E5%88%97%E8%A1%A8"><span class="toc-text">显示数据库列表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%98%BE%E7%A4%BA%E6%95%B0%E6%8D%AE%E8%A1%A8%E7%9A%84%E7%BB%93%E6%9E%84"><span class="toc-text">显示数据表的结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BB%BA%E5%BA%93%E4%B8%8E%E5%88%A0%E5%BA%93"><span class="toc-text">建库与删库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BB%BA%E8%A1%A8%E4%B8%8E%E5%88%A0%E8%A1%A8"><span class="toc-text">建表与删表</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#a-%E8%BF%9B%E5%85%A5%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-text">a.进入数据库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA"><span class="toc-text">创建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A0%E9%99%A4"><span class="toc-text">删除</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%80%E5%87%BA"><span class="toc-text">退出</span></a></li></ol></li></ol></li></ol> -->
+        <!-- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#MySQL-Linux"><span class="toc-text">MySQL-Linux</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-text">安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%80%E5%90%AFMySQL%E6%9C%8D%E5%8A%A1"><span class="toc-text">开启MySQL服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MySQL%E8%AE%BE%E7%BD%AE%E4%B8%BA%E5%BC%80%E6%9C%BA%E8%87%AA%E5%90%AF%E5%8A%A8%EF%BC%9A"><span class="toc-text">MySQL设置为开机自启动：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A3%80%E6%9F%A5MySQL%E7%8A%B6%E6%80%81"><span class="toc-text">检查MySQL状态</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%99%BB%E5%BD%95"><span class="toc-text">登录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9B%E5%85%A5%E7%B3%BB%E7%BB%9F%E5%BA%93"><span class="toc-text">进入系统库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E5%AF%86%E7%A0%81%EF%BC%8Clocalhost-%E6%9C%AC%E5%9C%B0%E8%AE%BF%E9%97%AE%EF%BC%8C-%E5%8F%AF%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE"><span class="toc-text">设置密码，localhost 本地访问，% 可远程访问</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9host"><span class="toc-text">修改host</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E6%96%B0%E7%94%A8%E6%88%B7"><span class="toc-text">创建新用户</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E7%94%A8%E6%88%B7%E8%AE%BF%E9%97%AE%E7%AB%AF%E5%8F%A3"><span class="toc-text">查看用户访问端口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%B7%E6%96%B0%E7%BC%93%E5%AD%98"><span class="toc-text">刷新缓存</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9-etc-mysql-mysqld-conf-d-mysqld-cnf-%E5%AE%9E%E7%8E%B0%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE"><span class="toc-text">修改 &#x2F;etc&#x2F;mysql&#x2F;mysqld.conf.d&#x2F;mysqld.cnf,实现远程访问</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%87%8D%E5%90%AF%E6%9C%8D%E5%8A%A1"><span class="toc-text">重启服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-text">创建数据库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%98%BE%E7%A4%BA%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-text">显示数据库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BAroot%E6%8E%88%E4%BA%88%E6%89%80%E6%9C%89%E6%9D%83%E9%99%90"><span class="toc-text">为root授予所有权限</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E9%97%AD%E6%9C%8D%E5%8A%A1"><span class="toc-text">关闭服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BD%BB%E5%BA%95%E5%8D%B8%E8%BD%BD"><span class="toc-text">彻底卸载</span></a></li></ol></li></ol></li></ol> -->
         <div class="toc"></div>
       </div>
     </div>

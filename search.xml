@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>MySQL-Linux</title>
+      <link href="/2024/11/14/mysql-linux/"/>
+      <url>/2024/11/14/mysql-linux/</url>
+      
+        <content type="html"><![CDATA[<h1 id="MySQL-Linux"><a href="#MySQL-Linux" class="headerlink" title="MySQL-Linux"></a>MySQL-Linux</h1><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><pre><code>sudo apt install -y mysql-server</code></pre><h3 id="开启MySQL服务"><a href="#开启MySQL服务" class="headerlink" title="开启MySQL服务"></a>开启MySQL服务</h3><pre><code>sudo systemctl start mysql</code></pre><h3 id="MySQL设置为开机自启动："><a href="#MySQL设置为开机自启动：" class="headerlink" title="MySQL设置为开机自启动："></a>MySQL设置为开机自启动：</h3><pre><code>sudo systemctl enable mysql</code></pre><h3 id="检查MySQL状态"><a href="#检查MySQL状态" class="headerlink" title="检查MySQL状态"></a>检查MySQL状态</h3><pre><code>sudo systemctl status mysql</code></pre><h3 id="登录"><a href="#登录" class="headerlink" title="登录"></a>登录</h3><pre><code>mysql -uroot -p;</code></pre><h3 id="进入系统库"><a href="#进入系统库" class="headerlink" title="进入系统库"></a>进入系统库</h3><pre><code>use mysql;</code></pre><h3 id="设置密码，localhost-本地访问，-可远程访问"><a href="#设置密码，localhost-本地访问，-可远程访问" class="headerlink" title="设置密码，localhost 本地访问，% 可远程访问"></a>设置密码，localhost 本地访问，% 可远程访问</h3><pre><code>ALTER USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED WITH mysql_native_password BY &#39;新密码&#39;;</code></pre><h3 id="修改host"><a href="#修改host" class="headerlink" title="修改host"></a>修改host</h3><pre><code>update user set host = &#39;%&#39; where user = &#39;root&#39;;</code></pre><h3 id="创建新用户"><a href="#创建新用户" class="headerlink" title="创建新用户"></a>创建新用户</h3><pre><code>CREATE USER &#39;username&#39;@&#39;host&#39; IDENTIFIED BY &#39;password&#39;;</code></pre><h3 id="查看用户访问端口"><a href="#查看用户访问端口" class="headerlink" title="查看用户访问端口"></a>查看用户访问端口</h3><pre><code>select user,host from user;</code></pre><h3 id="刷新缓存"><a href="#刷新缓存" class="headerlink" title="刷新缓存"></a>刷新缓存</h3><pre><code>flush privileges;</code></pre><h3 id="修改-etc-mysql-mysqld-conf-d-mysqld-cnf-实现远程访问"><a href="#修改-etc-mysql-mysqld-conf-d-mysqld-cnf-实现远程访问" class="headerlink" title="修改 &#x2F;etc&#x2F;mysql&#x2F;mysqld.conf.d&#x2F;mysqld.cnf,实现远程访问"></a>修改 &#x2F;etc&#x2F;mysql&#x2F;mysqld.conf.d&#x2F;mysqld.cnf,实现远程访问</h3><pre><code>bind-address            = 0.0.0.0</code></pre><h3 id="重启服务"><a href="#重启服务" class="headerlink" title="重启服务"></a>重启服务</h3><pre><code>sudo systemctl restart mysql</code></pre><h3 id="创建数据库"><a href="#创建数据库" class="headerlink" title="创建数据库"></a>创建数据库</h3><pre><code>CREATE DATABASE 库名;</code></pre><h3 id="显示数据库"><a href="#显示数据库" class="headerlink" title="显示数据库"></a>显示数据库</h3><pre><code>show databases;</code></pre><h3 id="为root授予所有权限"><a href="#为root授予所有权限" class="headerlink" title="为root授予所有权限"></a>为root授予所有权限</h3><pre><code>GRANT ALL PRIVILEGES ON *.* TO &#39;root&#39;@&#39;localhost&#39;;</code></pre><h3 id="关闭服务"><a href="#关闭服务" class="headerlink" title="关闭服务"></a>关闭服务</h3><pre><code>sudo systemctl stop mysql</code></pre><h3 id="彻底卸载"><a href="#彻底卸载" class="headerlink" title="彻底卸载"></a>彻底卸载</h3><pre><code>sudo apt purge mysql-*sudo rm -rf /etc/mysql/ /var/lib/mysqlsudo apt autoremovesudo apt autoclean</code></pre><p>C语言安装MySQL库</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install libmysqlclient-dev</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> MySQL </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>软件工程</title>
       <link href="/2024/06/24/ruan-jian-gong-cheng/"/>
       <url>/2024/06/24/ruan-jian-gong-cheng/</url>
@@ -146,7 +165,7 @@
       
         <tags>
             
-            <tag> mysql </tag>
+            <tag> MySQL </tag>
             
         </tags>
       
